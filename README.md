@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=MyZert" alt="MyZert Profile" width="150" height="150"/>
+  <img src="https://i.giphy.com/HCfZwSgUglFRFAukgF.webp" alt="MyZert Profile" width="150" style="border-radius: 50%;"/>
   
   # 🌸 MY ZERT 🌸
   ### Otaku & Backend Developer 🚀
@@ -9,19 +9,17 @@
 
   <br>
 
-  [![Spotify](https://img.shields.io/badge/Spotify-Listen_to_My_Favorite_Song-1ED760?style=for-the-badge&logo=spotify&logoColor=white)](https://open.spotify.com/track/29fFAKTm2Bvw9KwyxGtYgV?si=bXYEhE33TG6kx2gnVyS8_Q)
+  [![Spotify](https://img.shields.io/badge/Spotify-Listen_to_My_Favorite_Song-1ED760?style=for-the-badge&logo=spotify&logoColor=white)](https://open.spotify.com/track/4IlGjYs0OWzKSSvSIVonbv?si=Q9n2moViRMS_NJh8vJ7-cA)
 </div>
 
 ---
 
 ## 🎧 Now Playing
 <div align="center">
-  <!-- Markdown GitHub membatasi iframe, jadi kita pakai badge interaktif dan tautan -->
-  <a href="https://open.spotify.com/track/29fFAKTm2Bvw9KwyxGtYgV">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" alt="Spotify" width="200" />
-  </a>
+  <!-- Spotify Real Embed (Mendukung play langsung & fitur bawaan Spotify) -->
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4IlGjYs0OWzKSSvSIVonbv?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   <br>
-  <b><a href="https://open.spotify.com/track/29fFAKTm2Bvw9KwyxGtYgV">🎵 Play My Favorite Spotify Track 🎵</a></b>
+  *(Widget di atas adalah embed asli Spotify. Jika tidak muncul di beberapa platform seperti GitHub, klik tombol badge Spotify di atas untuk memutarnya!)*
 </div>
 
 ---
@@ -30,7 +28,7 @@
 Saya adalah seorang Backend Developer asal Indonesia yang sangat menyukai hal-hal berbau jejepangan. Saya suka menghabiskan waktu luang untuk bersantai dengan hobi Otaku saya!
 
 ### 🎲 Hobi & Ketertarikan:
-- 📺 **Nonton Anime:** Genre favorit saya adalah **Slice of Life (SOL)**, Romance, Gore, dan Isekai (Tapi secara khusus paling suka yang santai seperti SOL!).
+- 📺 **Nonton Anime:** Genre favorit saya adalah **Slice of Life (SOL)**, Romance, Gore, **Yuri**, dan Isekai (Tapi secara khusus paling suka yang santai seperti SOL!).
 - 📚 **Membaca:** Manga dan Light Novel.
 - 🎮 **Gaming:** Sangat suka main game **Visual Novel** dan **Gacha RPG**.
 - 🏯 **Sejarah & Budaya Jepang:** Saya sangat tertarik dengan sejarah dan budaya Jepang, tapi tidak untuk era Perang Dunia. Saya jauh lebih suka era **Zaman Heian** (Abad ke-10). Cerita sejarah sastra favorit saya dari abad ke-10 adalah **Taketori Monogatari** (Kisah Pemotong Bambu / Putri Kaguya).
@@ -69,8 +67,12 @@ Walaupun hobi saya santai, untuk urusan coding saya suka membangun sistem yang s
 ![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
 
 ### 🏗️ Arsitektur & Infrastruktur
-- **Backend & API:** Rust API
-- **Infra:** OTT Infrastructure
+- **Backend & API:** <br>
+  ![Rust API](https://img.shields.io/badge/Rust_API-000000?style=for-the-badge&logo=rust&logoColor=white)
+  ![REST API](https://img.shields.io/badge/REST_API-005571?style=for-the-badge&logo=json&logoColor=white)
+  ![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
+- **Infra:** <br>
+  ![OTT Infrastructure](https://img.shields.io/badge/OTT_Infrastructure-FF4500?style=for-the-badge&logo=serverless&logoColor=white)
 
 ---
 <div align="center">
