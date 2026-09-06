@@ -1,5 +1,4 @@
 <div align="center">
-  <img src="https://i.giphy.com/HCfZwSgUglFRFAukgF.webp" alt="MyZert Profile" width="150" style="border-radius: 50%;"/>
   
   # 🌸 MY ZERT 🌸
   ### Otaku & Backend Developer 🚀
@@ -16,31 +15,32 @@
 
 ## 🎧 Now Playing
 <div align="center">
-  <!-- Spotify Real Embed (Mendukung play langsung & fitur bawaan Spotify) -->
-  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4IlGjYs0OWzKSSvSIVonbv?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  <a href="https://open.spotify.com/track/4IlGjYs0OWzKSSvSIVonbv?si=Q9n2moViRMS_NJh8vJ7-cA">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" width="80" alt="Spotify Logo">
+  </a>
   <br>
-  *(Widget di atas adalah embed asli Spotify. Jika tidak muncul di beberapa platform seperti GitHub, klik tombol badge Spotify di atas untuk memutarnya!)*
+  <b><a href="https://open.spotify.com/track/4IlGjYs0OWzKSSvSIVonbv?si=Q9n2moViRMS_NJh8vJ7-cA">🎵 Klik gambar di atas untuk mendengarkan lagu favorit saya! 🎵</a></b>
 </div>
 
 ---
 
 ## 🎌 About Me (私について)
-Saya adalah seorang Backend Developer asal Indonesia yang sangat menyukai hal-hal berbau jejepangan. Saya suka menghabiskan waktu luang untuk bersantai dengan hobi Otaku saya!
+Saya adalah seorang **Backend Developer** asal Indonesia yang sangat menyukai hal-hal berbau jejepangan. Saya suka menghabiskan waktu luang untuk bersantai dengan hobi Otaku saya!
 
-### 🎲 Hobi & Ketertarikan:
-- 📺 **Nonton Anime:** Genre favorit saya adalah **Slice of Life (SOL)**, Romance, Gore, **Yuri**, dan Isekai (Tapi secara khusus paling suka yang santai seperti SOL!).
+### 🎲 Hobi & Ketertarikan
+- 📺 **Anime:** Genre favorit saya adalah **Slice of Life (SOL)**, Romance, Gore, **Yuri**, dan Isekai (Tapi paling favorit yang santai seperti SOL!).
 - 📚 **Membaca:** Manga dan Light Novel.
 - 🎮 **Gaming:** Sangat suka main game **Visual Novel** dan **Gacha RPG**.
-- 🏯 **Sejarah & Budaya Jepang:** Saya sangat tertarik dengan sejarah dan budaya Jepang, tapi tidak untuk era Perang Dunia. Saya jauh lebih suka era **Zaman Heian** (Abad ke-10). Cerita sejarah sastra favorit saya dari abad ke-10 adalah **Taketori Monogatari** (Kisah Pemotong Bambu / Putri Kaguya).
+- 🏯 **Sejarah & Budaya Jepang:** Saya sangat tertarik dengan sejarah dan budaya Jepang. Saya kurang menyukai sejarah era Perang Dunia, dan jauh lebih menyukai era **Zaman Heian** (Abad ke-10). Karya sastra favorit saya dari abad tersebut adalah **Taketori Monogatari** (Kisah Pemotong Bambu / Putri Kaguya).
 
-### 🍜 Makanan & Minuman Favorit:
+### 🍜 Favorit Lainnya
 - 🍵 **Minuman:** Matcha Green Tea & Taro.
 - 🥢 **Makanan:** Mie Ayam Gacoan.
 
 ---
 
 ## 💻 Tech Stack & Infrastructure
-Walaupun hobi saya santai, untuk urusan coding saya suka membangun sistem yang solid!
+Walaupun hobi saya santai, untuk urusan coding saya serius dan suka mengeksplorasi sistem yang kompleks!
 
 ### ⚙️ Bahasa Pemrograman
 ![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
@@ -64,7 +64,6 @@ Walaupun hobi saya santai, untuk urusan coding saya suka membangun sistem yang s
 ![Vue](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)
 ![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
 
 ### 🏗️ Arsitektur & Infrastruktur
 - **Backend & API:** <br>
@@ -76,7 +75,7 @@ Walaupun hobi saya santai, untuk urusan coding saya suka membangun sistem yang s
 
 ---
 <div align="center">
-  <img src="https://media.giphy.com/media/10VjiVoa9rWC4M/giphy.gif" width="300" alt="Anime GIF">
-  <br>
-  <i>Mari berteman dan berkolaborasi!</i>
+  <img src="https://i.giphy.com/HCfZwSgUglFRFAukgF.webp" width="400" alt="Anime Character">
+  <br><br>
+  <b><i>~ Mari berteman dan bicarakan Tech & Anime! ~</i></b>
 </div>
