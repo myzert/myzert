@@ -16,10 +16,10 @@
 ## 🎧 Now Playing
 <div align="center">
   <a href="https://open.spotify.com/track/4IlGjYs0OWzKSSvSIVonbv?si=Q9n2moViRMS_NJh8vJ7-cA">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" width="80" alt="Spotify Logo">
+    <img src="https://i.scdn.co/image/ab67616d0000b2733a6fc87ea4b04c741a0bc82d" width="150" style="border-radius: 12px;" alt="Album Cover">
   </a>
   <br>
-  <b><a href="https://open.spotify.com/track/4IlGjYs0OWzKSSvSIVonbv?si=Q9n2moViRMS_NJh8vJ7-cA">🎵 Klik gambar di atas untuk mendengarkan lagu favorit saya! 🎵</a></b>
+  <b><a href="https://open.spotify.com/track/4IlGjYs0OWzKSSvSIVonbv?si=Q9n2moViRMS_NJh8vJ7-cA">🎵 Klik gambar untuk memutar lagunya! 🎵</a></b>
 </div>
 
 ---
@@ -47,6 +47,8 @@ Walaupun hobi saya santai, untuk urusan coding saya serius dan suka mengeksplora
 ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 ![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
 ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
