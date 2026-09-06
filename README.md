@@ -6,6 +6,9 @@
 
   <br>
 
+  <img src="https://komarev.com/ghpvc/?username=myzert&color=blueviolet&style=flat-square&label=PROFILE+VIEWS" alt="Profile Views" />
+  <br><br>
+
   [![Spotify](https://img.shields.io/badge/Spotify-Listen_to_My_Favorite_Song-1ED760?style=for-the-badge&logo=spotify&logoColor=white)](https://open.spotify.com/track/4IlGjYs0OWzKSSvSIVonbv?si=Q9n2moViRMS_NJh8vJ7-cA)
 </div>
 
@@ -44,7 +47,7 @@ Walaupun hobi saya santai, untuk urusan coding saya serius dan suka mengeksplora
 <p align="center">
   <img src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white" />
   <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" />
-  <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white" />
+  <img src="https://img.shields.io/badge/CSark-239120?style=for-the-badge&logo=c-sharp&logoColor=white" />
   <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" />
   <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
   <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white" />
@@ -62,7 +65,6 @@ Walaupun hobi saya santai, untuk urusan coding saya serius dan suka mengeksplora
   <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" />
   <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
   <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" />
-  <img src="https://img.shields.io/badge/SQL-003B57?style=for-the-badge" />
 </p>
 
 ### 🚀 Frameworks & Runtimes
@@ -73,10 +75,12 @@ Walaupun hobi saya santai, untuk urusan coding saya serius dan suka mengeksplora
   <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" />
   <img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D" />
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" />
 </p>
 
 ### 🌐 Backend & API
 <p align="center">
+  <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" />
   <img src="https://img.shields.io/badge/Hono-E36002?style=for-the-badge&logo=hono&logoColor=white" />
   <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white" />
   <img src="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white" />
@@ -95,6 +99,25 @@ Walaupun hobi saya santai, untuk urusan coding saya serius dan suka mengeksplora
 </p>
 
 ---
+
+## 📊 GitHub Analytics
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=myzert&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117" alt="GitHub Stats" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=myzert&theme=tokyonight&hide_border=true&background=0D1117" alt="GitHub Streak" />
+  <br><br>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=myzert&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117" alt="Top Languages" />
+</div>
+
+---
+
+## 🤝 Connect With Me
+<div align="center">
+  <a href="https://github.com/myzert"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
+  <a href="https://discord.com/users/YOUR_DISCORD_ID"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
+  <a href="mailto:your.email@example.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
+</div>
+<br>
+
 <div align="center">
   <img src="https://i.giphy.com/HCfZwSgUglFRFAukgF.webp" width="400" alt="Anime Character">
   <br><br>
