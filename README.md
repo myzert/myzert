@@ -113,6 +113,3 @@ Walaupun hobi saya santai, untuk urusan coding saya serius dan suka mengeksplora
   <br><br>
   <b><i>~ Mari berteman dan bicarakan Tech & Anime! ~</i></b>
 </div>
-test
-test2
-test3
