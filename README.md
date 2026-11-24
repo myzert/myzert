@@ -1,10 +1,7 @@
 <div align="center">
 
-  <!-- Statistik GitHub Otomatis Mode Terang & Gelap (Satu-satunya gambar di profil) -->
-  <a href="https://github.com/myzert">
-    <img src="assets/stats.svg#gh-dark-mode-only" alt="Statistik GitHub myzert" width="100%"/>
-    <img src="assets/stats-light.svg#gh-light-mode-only" alt="Statistik GitHub myzert" width="100%"/>
-  </a>
+  <!-- Satu-satunya gambar: 1 SVG Transparan Adaptif untuk Dark & Light Mode -->
+  <img src="assets/stats.svg" alt="Statistik GitHub myzert" width="100%"/>
 
   <br>
 
@@ -22,6 +19,6 @@
   </p>
 
   <br>
-  <sub><i>Auto-update tiap jam via GitHub Actions &middot; 24-11-2026 19:38 WIB</i></sub>
+  <sub><i>Auto-update tiap jam via GitHub Actions &middot; 24-11-2026 19:42 WIB</i></sub>
 
 </div>

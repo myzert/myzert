@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 """
-Generator Kartu Statistik GitHub myzert (v2 Perfect Contrast & Dual-Theme).
-- Mendukung GitHub Light Mode (#gh-light-mode-only) dan Dark Mode (#gh-dark-mode-only).
-- Karakter intip (peek) sudah dihapus sesuai permintaan.
-- Statistik di mode terang dan gelap terlihat sangat jelas dengan kontras tinggi.
-- Aset Anime PNG HD Transparan & Tajam (Tanpa box kaku, tanpa white halo).
+Generator Kartu Statistik GitHub myzert (Single SVG 2-Theme Adaptive).
+- 1 SVG untuk 2 Tema Sekaligus: Otomatis menyesuaikan Dark & Light Mode tanpa background kaku.
+- 100% Transparan pada Canvas Luar (Menyatu alami di UI GitHub apapun).
 - Ikon Vektor Octicons Resmi (Repo, Star, Commit, Fork, Followers, Following).
-- README.md Ultra-Clean: Hanya menampilkan kartu statistik ini sebagai satu-satunya gambar.
+- Aset Anime PNG HD Transparan & Tajam (Tanpa 'peek').
+- README.md Ultra-Clean: Hanya 1 gambar statistik tunggal di profil.
 """
 import base64
 import json
@@ -147,7 +146,6 @@ def get_stats(now):
 
 # ---------------------------------------------------------------- SVG Generation
 def get_image_b64(name):
-    # Hindari 'peek'
     if name == "peek":
         name = "shy"
 
@@ -161,7 +159,7 @@ def get_image_b64(name):
     return ""
 
 
-def build_activity_chart(values, x, y, w, h, accent_col):
+def build_activity_chart(values, x, y, w, h):
     mx = max(max(values), 1)
     n = len(values)
     pts = [(x + i * w / (n - 1), y + h - (v / mx) * h) for i, v in enumerate(values)]
@@ -176,56 +174,14 @@ def build_activity_chart(values, x, y, w, h, accent_col):
 
     return f"""
 <path class="area" d="{area}" fill="url(#actArea)"/>
-<path class="chartLine" pathLength="1" d="{d}" fill="none" stroke="{accent_col}" stroke-width="2.5" stroke-linecap="round"/>
-<circle class="pop" cx="{last[0]:.1f}" cy="{last[1]:.1f}" r="4" fill="{accent_col}"/>
-<circle class="ping" cx="{last[0]:.1f}" cy="{last[1]:.1f}" r="4" fill="none" stroke="{accent_col}" stroke-width="2"/>"""
+<path class="chartLine" pathLength="1" d="{d}" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"/>
+<circle class="pop" cx="{last[0]:.1f}" cy="{last[1]:.1f}" r="4" fill="var(--accent)"/>
+<circle class="ping" cx="{last[0]:.1f}" cy="{last[1]:.1f}" r="4" fill="none" stroke="var(--accent)" stroke-width="2"/>"""
 
 
-def generate_svg(now, s, char_name, quote, mode="dark"):
+def generate_svg(now, s, char_name, quote):
     W, H = 920, 395
     img_b64 = get_image_b64(char_name)
-
-    # Warna spesifik tema (jaminan 100% kontras tajam)
-    if mode == "light":
-        bg_card = "#ffffff"
-        border_card = "#d0d7de"
-        title_col = "#1f2328"
-        sub_col = "#57606a"
-        sec_col = "#24292f"
-        stat_bg = "#f6f8fa"
-        stat_border = "#d0d7de"
-        stat_val_col = "#1f2328"
-        stat_lbl_col = "#57606a"
-        icon_col = "#d9363e"
-        lang_text_col = "#57606a"
-        lang_pct_col = "#1f2328"
-        bar_bg = "#eaeef2"
-        accent = "#d9363e"
-        footer_col = "#8c959f"
-        badge_bg = "rgba(255, 255, 255, 0.95)"
-        badge_border = "#d0d7de"
-        badge_text = "#d9363e"
-        act_op = "0.22"
-    else:
-        bg_card = "#0d1117"
-        border_card = "#30363d"
-        title_col = "#f0f6fc"
-        sub_col = "#8b949e"
-        sec_col = "#f0f6fc"
-        stat_bg = "#161b22"
-        stat_border = "#21262d"
-        stat_val_col = "#f0f6fc"
-        stat_lbl_col = "#8b949e"
-        icon_col = "#ff5376"
-        lang_text_col = "#8b949e"
-        lang_pct_col = "#f0f6fc"
-        bar_bg = "#21262d"
-        accent = "#ff5376"
-        footer_col = "#484f58"
-        badge_bg = "rgba(22, 27, 34, 0.90)"
-        badge_border = "#30363d"
-        badge_text = "#ff5376"
-        act_op = "0.32"
 
     stat_cards = [
         ("Repositori", fmt_num(s["repos"]), "repo"),
@@ -241,11 +197,11 @@ def generate_svg(now, s, char_name, quote, mode="dark"):
     # 1. Header Profil & Status Subtitle
     elements.append(f"""
 <g class="slide" style="animation-delay:0.1s">
-  <text x="35" y="48" font-size="24" font-weight="800" fill="{title_col}">Statistik GitHub</text>
-  <text x="35" y="70" font-size="13" font-weight="500" fill="{sub_col}">@{escape(USER)} &#183; Backend Developer &amp; Otaku &#183; {escape(quote)}</text>
+  <text class="title-text" x="35" y="48" font-size="24" font-weight="800">Statistik GitHub</text>
+  <text class="sub-text" x="35" y="70" font-size="13" font-weight="500">@{escape(USER)} &#183; Backend Developer &amp; Otaku &#183; {escape(quote)}</text>
 </g>""")
 
-    # 2. Grid Kartu Statistik Berkontras Tinggi dengan Vektor Ikon
+    # 2. Grid Kartu Statistik Transparan dengan Vektor Ikon
     for i, (label, val, icon_key) in enumerate(stat_cards):
         col, row = i % 3, i // 3
         cx = 35 + col * 188
@@ -254,60 +210,113 @@ def generate_svg(now, s, char_name, quote, mode="dark"):
         icon_path = ICONS[icon_key]
         elements.append(f"""
 <g class="slide" style="animation-delay:{delay:.2f}s">
-  <rect x="{cx}" y="{cy}" width="176" height="58" rx="10" fill="{stat_bg}" stroke="{stat_border}" stroke-width="1"/>
-  <text x="{cx+14}" y="{cy+28}" font-size="20" font-weight="800" fill="{stat_val_col}">{escape(val)}</text>
+  <rect class="stat-box" x="{cx}" y="{cy}" width="176" height="58" rx="10"/>
+  <text class="stat-val" x="{cx+14}" y="{cy+28}" font-size="20" font-weight="800">{escape(val)}</text>
   <g transform="translate({cx+14}, {cy+35})">
-    <svg width="13" height="13" viewBox="0 0 16 16" fill="{icon_col}">{icon_path}</svg>
+    <svg width="13" height="13" viewBox="0 0 16 16" fill="var(--icon-color)">{icon_path}</svg>
   </g>
-  <text x="{cx+32}" y="{cy+46}" font-size="11" font-weight="500" fill="{stat_lbl_col}">{escape(label)}</text>
+  <text class="stat-lbl" x="{cx+32}" y="{cy+46}" font-size="11" font-weight="500">{escape(label)}</text>
 </g>""")
 
     # 3. Bahasa Teratas
-    elements.append(f"""
+    elements.append("""
 <g class="slide" style="animation-delay:0.75s">
-  <text x="35" y="246" font-size="13" font-weight="700" fill="{sec_col}">Bahasa Teratas</text>
+  <text class="sec-title" x="35" y="246" font-size="13" font-weight="700">Bahasa Teratas</text>
 </g>""")
 
     for i, (lang, pct) in enumerate(s["langs"][:4]):
         lx = 35 + i * 144
         bar_w = max(4, min(pct, 100)) * 1.25
-        col = LANG_COLORS.get(lang, accent)
+        col = LANG_COLORS.get(lang, "#d9363e")
         elements.append(f"""
 <g class="slide" style="animation-delay:{0.85 + i*0.1:.2f}s">
   <circle cx="{lx+5}" cy="265" r="4" fill="{col}"/>
-  <text x="{lx+14}" y="269" font-size="12" fill="{lang_text_col}">{escape(lang)} <tspan font-weight="700" fill="{lang_pct_col}">{pct}%</tspan></text>
-  <rect x="{lx}" y="277" width="128" height="6" rx="3" fill="{bar_bg}"/>
+  <text class="lang-text" x="{lx+14}" y="269" font-size="12">{escape(lang)} <tspan class="lang-pct" font-weight="700">{pct}%</tspan></text>
+  <rect class="bar-bg" x="{lx}" y="277" width="128" height="6" rx="3"/>
   <rect class="bar" x="{lx}" y="277" width="{bar_w:.0f}" height="6" rx="3" fill="{col}" style="animation-delay:{0.95 + i*0.12:.2f}s"/>
 </g>""")
 
     if not s["langs"]:
-        elements.append(f'<text x="35" y="270" font-size="12" fill="{sub_col}">-</text>')
+        elements.append('<text class="sub-text" x="35" y="270" font-size="12">-</text>')
 
     # 4. Grafik Aktivitas 30 Hari
     total_events = sum(s["activity"])
     elements.append(f"""
 <g class="slide" style="animation-delay:1.25s">
-  <text x="35" y="318" font-size="13" font-weight="700" fill="{sec_col}">Aktivitas 30 Hari <tspan font-weight="400" fill="{sub_col}">({total_events} event)</tspan></text>
+  <text class="sec-title" x="35" y="318" font-size="13" font-weight="700">Aktivitas 30 Hari <tspan class="sub-text" font-weight="400">({total_events} event)</tspan></text>
 </g>""")
-    elements.append(build_activity_chart(s["activity"], 35, 330, 560, 30, accent))
+    elements.append(build_activity_chart(s["activity"], 35, 330, 560, 30))
 
     # Timestamp
     elements.append(f"""
-<text x="35" y="380" font-size="10" fill="{footer_col}">Diperbarui {now:%d-%m-%Y %H:%M} WIB &#183; Auto-update tiap jam</text>""")
+<text class="footer-time" x="35" y="380" font-size="10">Diperbarui {now:%d-%m-%Y %H:%M} WIB &#183; Auto-update tiap jam</text>""")
 
     # 5. Efek Sparkles Anime
     sparkles = []
     sp_coords = [(635, 55, 8, 0), (895, 75, 7, 0.6), (620, 345, 6, 1.2), (890, 335, 8, 0.4), (615, 200, 5, 1.8)]
     for sx, sy, sr, sd in sp_coords:
         sparkles.append(
-            f'<path class="tw" d="M0,-{sr} Q0,0 {sr},0 Q0,0 0,{sr} Q0,0 -{sr},0 Q0,0 0,-{sr}Z" fill="{accent}" '
+            f'<path class="tw" d="M0,-{sr} Q0,0 {sr},0 Q0,0 0,{sr} Q0,0 -{sr},0 Q0,0 0,-{sr}Z" fill="var(--accent)" '
             f'transform="translate({sx},{sy})" style="animation-delay:{sd}s"/>'
         )
     sparkles_svg = "\n".join(sparkles)
 
     svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
 <style>
+  :root {{
+    --title-color: #1f2328;
+    --sub-color: #57606a;
+    --sec-color: #24292f;
+    --stat-bg: #f6f8fa;
+    --stat-border: #d0d7de;
+    --stat-val: #1f2328;
+    --stat-lbl: #57606a;
+    --icon-color: #d9363e;
+    --lang-text: #57606a;
+    --lang-pct: #1f2328;
+    --bar-bg: #eaeef2;
+    --accent: #d9363e;
+    --footer-color: #8c959f;
+    --badge-bg: rgba(255, 255, 255, 0.95);
+    --badge-border: #d0d7de;
+    --badge-text: #d9363e;
+    --act-op: 0.22;
+  }}
+
+  @media (prefers-color-scheme: dark) {{
+    :root {{
+      --title-color: #f0f6fc;
+      --sub-color: #8b949e;
+      --sec-color: #f0f6fc;
+      --stat-bg: #161b22;
+      --stat-border: #30363d;
+      --stat-val: #f0f6fc;
+      --stat-lbl: #8b949e;
+      --icon-color: #ff5376;
+      --lang-text: #8b949e;
+      --lang-pct: #f0f6fc;
+      --bar-bg: #21262d;
+      --accent: #ff5376;
+      --footer-color: #484f58;
+      --badge-bg: rgba(22, 27, 34, 0.90);
+      --badge-border: #30363d;
+      --badge-text: #ff5376;
+      --act-op: 0.32;
+    }}
+  }}
+
   text {{ font-family: {FONT}; }}
+  .title-text {{ fill: var(--title-color); }}
+  .sub-text {{ fill: var(--sub-color); }}
+  .sec-title {{ fill: var(--sec-color); }}
+  .stat-box {{ fill: var(--stat-bg); stroke: var(--stat-border); stroke-width: 1; }}
+  .stat-val {{ fill: var(--stat-val); }}
+  .stat-lbl {{ fill: var(--stat-lbl); }}
+  .lang-text {{ fill: var(--lang-text); }}
+  .lang-pct {{ fill: var(--lang-pct); }}
+  .bar-bg {{ fill: var(--bar-bg); }}
+  .footer-time {{ fill: var(--footer-color); }}
+
   .slide {{ opacity:0; animation: slide .7s cubic-bezier(.2,.8,.2,1) forwards; }}
   .chartLine {{ stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 1.6s ease 1.3s forwards; }}
   .area {{ opacity: 0; animation: fade 1.2s ease 2.1s forwards; }}
@@ -331,13 +340,12 @@ def generate_svg(now, s, char_name, quote, mode="dark"):
 </style>
 <defs>
   <linearGradient id="actArea" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="{accent}" stop-opacity="{act_op}"/>
-    <stop offset="100%" stop-color="{accent}" stop-opacity="0.0"/>
+    <stop offset="0%" stop-color="var(--accent)" stop-opacity="var(--act-op)"/>
+    <stop offset="100%" stop-color="var(--accent)" stop-opacity="0.0"/>
   </linearGradient>
 </defs>
 
-<!-- Card Canvas: Warna disesuaikan dengan kontras tajam sempurna -->
-<rect width="{W}" height="{H}" rx="18" fill="{bg_card}" stroke="{border_card}" stroke-width="1"/>
+<!-- Background 100% TRANSPARAN TANPA KOTAK STATIS (Menyatu alami di Light & Dark GitHub) -->
 
 <!-- Left & Center Stats Content -->
 {"".join(elements)}
@@ -347,8 +355,8 @@ def generate_svg(now, s, char_name, quote, mode="dark"):
   <image href="{img_b64}" x="635" y="16" width="265" height="360" preserveAspectRatio="xMidYMid meet"/>
   <!-- Floating Mood Badge -->
   <g transform="translate(645, 342)">
-    <rect width="245" height="26" rx="8" fill="{badge_bg}" stroke="{badge_border}" stroke-width="1"/>
-    <text x="122" y="17" text-anchor="middle" font-size="11" font-weight="700" fill="{badge_text}">🌸 {escape(quote)}</text>
+    <rect width="245" height="26" rx="8" fill="var(--badge-bg)" stroke="var(--badge-border)" stroke-width="1"/>
+    <text x="122" y="17" text-anchor="middle" font-size="11" font-weight="700" fill="var(--badge-text)">🌸 {escape(quote)}</text>
   </g>
 </g>
 
@@ -362,11 +370,8 @@ def generate_svg(now, s, char_name, quote, mode="dark"):
 def generate_readme(now, quote):
     return f"""<div align="center">
 
-  <!-- Statistik GitHub Otomatis Mode Terang & Gelap (Satu-satunya gambar di profil) -->
-  <a href="https://github.com/{USER}">
-    <img src="assets/stats.svg#gh-dark-mode-only" alt="Statistik GitHub {USER}" width="100%"/>
-    <img src="assets/stats-light.svg#gh-light-mode-only" alt="Statistik GitHub {USER}" width="100%"/>
-  </a>
+  <!-- Satu-satunya gambar: 1 SVG Transparan Adaptif untuk Dark & Light Mode -->
+  <img src="assets/stats.svg" alt="Statistik GitHub {USER}" width="100%"/>
 
   <br>
 
@@ -407,16 +412,13 @@ def main():
 
     stats = get_stats(now)
 
-    # Generate kedua mode agar kontras tajam 100% di mode terang dan gelap
-    svg_dark = generate_svg(now, stats, char_name, quote, mode="dark")
-    svg_light = generate_svg(now, stats, char_name, quote, mode="light")
+    # Generate 1 single SVG yang adaptif terhadap Dark Mode dan Light Mode
+    svg_code = generate_svg(now, stats, char_name, quote)
 
-    (ASSETS / "stats.svg").write_text(svg_dark, encoding="utf-8")
-    (ASSETS / "stats-dark.svg").write_text(svg_dark, encoding="utf-8")
-    (ASSETS / "stats-light.svg").write_text(svg_light, encoding="utf-8")
+    (ASSETS / "stats.svg").write_text(svg_code, encoding="utf-8")
     (ROOT / "README.md").write_text(generate_readme(now, quote), encoding="utf-8")
 
-    print(f"OK {now:%F %H:%M} [v2 Dual-Theme Contrast] char={char_name} quote='{quote}' repos={stats['repos']} stars={stats['stars']}")
+    print(f"OK {now:%F %H:%M} [1-SVG Adaptive] char={char_name} quote='{quote}' repos={stats['repos']} stars={stats['stars']}")
 
 
 if __name__ == "__main__":
